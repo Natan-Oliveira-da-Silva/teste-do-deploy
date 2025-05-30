@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página principal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+
+</head>
+<body class="bg-primary-subtle">
+    
+    <div class="container mt-5 d-flex flex-column align-items-center bg-white p-5 rounded shadow">
+        <h1 class="text-md ">Pagina Incial</h1>
+        <p>Este aplicativo permite o acompanhamento  de tarefas de funcionarios de uma empresa.
+            Existem três tipos de usuários:
+            <ul>
+                <li>Supervisor: Pode criar, editar e consultar as tarefas pendente dos funcionarios.</li>
+                <li>Gerente: Pode Gerar relatórios.</li>
+                <li>Funcionário: Pode visualizar suas próprias tarefas, tarefas pendentes atribuidas e marcar como concluidas as tarefas atribuidas para ele.</li>
+        </p>
+
+        <div class="d-flex justify-content-center gap-3">
+            <a href="../views/funcionario/homeFuncionario.html" class="btn btn-primary">Funcionario</a>
+            <a href="../views/supervisor/homeSupervisor.html" class="btn btn-primary">Supervisor</a>
+            <a href="../views/gerente/homeGerente.html" class="btn btn-primary">Gerente</a>
+        </div>
+    </div>
+    
+
+
+<script src="../scripts/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+</body>
+</html>
