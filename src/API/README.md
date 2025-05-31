@@ -23,7 +23,7 @@ npm run dev
 
 **GET** `/teste`
 
-Essa rota permite que o usuário teste a sua conexão com a API.
+Essa rota permite que o usuário teste a sua conexão com a API. Essa rota só tem utilidade durante o desenvolvimento, pois não será usada pelo front-end.
 
 ### ✅ Resposta de Sucesso
 ```json
@@ -38,7 +38,7 @@ Essa rota permite que o usuário teste a sua conexão com a API.
 
 Segue abaixo as rotas disponíveis para funcionários.
 
-### 📥 Listar tarefas pendentes
+### 📥 Ver Todas as tarefas pendentes para mim
 
 **GET** `/funcionario/:id_funcionario`
 
@@ -103,15 +103,15 @@ Observação: uma tarefa só pode ser marcada como concluída se ela já estiver
 
 Segue abaixo as rotas disponíveis para supervisores que usam o método GET. Na sequência, serão apresentadas também duas outras rotas disponíveis para supervisores que usam outros métodos.
 
-### 📥 Listar todas as tarefas de um funcionário
+### 📥 Ver todas as tarefas (pendentes e concluídas) de um funcionário
 
 **GET** `/supervisor/todas/:id_funcionario`
 
-### 📥 Listar tarefas pendentes de um funcionário
+### 📥 Ver todas as tarefas pendentes de um funcionário
 
 **GET** `/supervisor/pendentes/:id_funcionario`
 
-### 📥 Listar tarefas concluídas de um funcionário
+### 📥 Ver todas as tarefas concluídas de um funcionário
 
 **GET** `/supervisor/concluidas/:id_funcionario`
 
@@ -132,7 +132,7 @@ As requisições exclusivas de supervisores listadas acima tem o mesmo formato d
 ---
 
 
-### ✏️ Criar uma nova tarefa
+### ✏️ Criar tarefa
 
 **POST** `/supervisor`
 
@@ -203,15 +203,15 @@ Observação: uma tarefa só pode ser associada a um funcionário se ela não es
 
 Seguem abaixo as rotas disponíveis para gerentes.
 
-### 📋 Listar todas as tarefas
+### 📋 Ver todas as tarefas existentes
 
 **GET** `/gerente/todas` -> Esta rota retorna um array com todas as tarefas (PENDENTES E CONCLUÍDAS) existentes no banco de dados.
 
-### 📋 Listar tarefas pendentes
+### 📋 Ver todas as tarefas pendentes
 
 **GET** `/gerente/pendentes` -> Esta rota retorna um array com todas as tarefas PENDENTES existentes no banco de dados.
 
-### 📋 Listar todos os funcionários disponíveis (sem tarefas pendentes)
+### 📋 Ver todos os funcionários sem tarefas pendentes
 
 **GET** `/gerente/funcionariosdisponiveis` -> Esta rota retorna um array com todos os funcionários que não possuem tarefas pendentes. Em caso de sucesso, a API retorna um array de objetos em que cada objeto é um funcionário que não tem tarefas pendentes.
 
@@ -237,7 +237,7 @@ Seguem abaixo as rotas disponíveis para gerentes.
 
 ---
 
-### 📋 Listar tarefas criadas por um supervisor
+### 📋 Ver todas as tarefas criadas por um supervisor
 
 **GET** `/gerente/:id_supervisor`
 
