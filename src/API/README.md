@@ -34,6 +34,42 @@ Essa rota permite que o usuário teste a sua conexão com a API. Essa rota só t
 
 ---
 
+## 👷‍♂️ Rotas que Retornam os Clientes
+
+Segue abaixo as rotas que retornam os clientes.
+
+### 📥 Ver Todas as tarefas pendentes para mim
+
+**GET** `/usuario/todos` -> retorna todos os registros da tabela de clientes
+
+**GET** `/usuario/funcionarios` -> retorna todos os funcionários existentes
+
+**GET** `/usuario/supervisores` -> retorna todos os supervisores existentes
+
+**GET** `/usuario/gerentes` -> retorna todos os gerentes existentes
+
+
+### ✅ Resposta de Sucesso
+
+* **200 OK**: Array de objetos em que cada objeto do array é um cliente.
+
+```json
+[
+    {
+        "id": 51,
+        "nome": "Supervisor A",
+        "cargo": "supervisor"
+    }
+]
+```
+
+### ❌ Erros
+
+* **500 Internal Server Error**: Erro interno do servidor.
+
+
+---
+
 ## 👷‍♂️ Funcionalidades Disponíveis para Funcionários
 
 Segue abaixo as rotas disponíveis para funcionários.
