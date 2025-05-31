@@ -6,10 +6,10 @@ Esta API permite a criação, atribuição e gerenciamento de tarefas entre func
 
 ## 🔄 Como Rodar a API
 
-Para rodar a API localmente no seu computador, siga as seguintes instruções.
-1 - Crie uma pasta no seu computador
-2 - Abra essa pasta no Visual Studio Code
-3 - No termimal integrado do Visual Studio Code, use o PowerShell para executar os seguintes comandos:
+Para rodar a API localmente no seu computador, siga as seguintes instruções:
+- 1 - Crie uma pasta no seu computador
+- 2 - Abra essa pasta no Visual Studio Code
+- 3 - No termimal integrado do Visual Studio Code, use o PowerShell para executar os seguintes comandos:
 ```
 git clone git@github.com:ElvisReis2K/Enterprise-Task.git
 cd Enterprise-Task/src/API
