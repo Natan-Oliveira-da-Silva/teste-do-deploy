@@ -13,11 +13,6 @@ Para rodar a API localmente no seu computador, siga as seguintes instruções:
 ```
 git clone git@github.com:ElvisReis2K/Enterprise-Task.git
 cd Enterprise-Task/src/API
-npm run dev
-````
-
-Em caso de erro, execute os seguintes comandos:
-```
 npm install
 npm run dev
 ````
