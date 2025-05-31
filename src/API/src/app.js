@@ -5,7 +5,10 @@ import tratadorDeErros from "./middlewares/tratadorDeErros.js";
 import router from "./routes.js";
 const PORT = 3000;
 const app = express();
+import cors from "cors";
+
 app.use(express.json());
+app.use(cors());
 
 app.use(router);
 criaEPopulaTabelas();
