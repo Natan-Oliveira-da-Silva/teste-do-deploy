@@ -1,12 +1,5 @@
 import { openDb } from "../configDB.js";
 
-export async function teste(req, res) {
-  res.status(200).json({
-    mensagem: "Você se conectou com a API.",
-  });
-}
-
-
 export async function pegaTodasAsTarefas(req, res, next) {
   try {
     const db = await openDb();
@@ -202,23 +195,7 @@ export async function pegaTodasAsTarefasCriadasPorUmSupervisor(req, res, next) {
     next(error);
   }
 }
-export async function pegaTodosOsFuncionariosDisponiveis(req, res, next) {
-  try {
-    const db = await openDb();
 
-    const funcionarios = await db.all(`
-      SELECT c.id, c.nome
-      FROM clientes c
-      LEFT JOIN tarefas t 
-        ON c.id = t.id_funcionário AND t.estaConcluida = 0
-      WHERE c.cargo = 'funcionário' AND t.id IS NULL
-    `);
-
-    res.status(200).json(funcionarios);
-  } catch (error) {
-    next(error);
-  }
-}
 export async function criaTarefa(req, res, next) {
   const { id_supervisor, descricao } = req.body; // Inclui id_funcionário se for usar
   // 1. Validação de campos obrigatórios iniciais (opcional, mas boa prática)

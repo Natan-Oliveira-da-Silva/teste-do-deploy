@@ -1,8 +1,8 @@
 import { Router } from "express";
 import { validaId } from "./middlewares/validaId.js";
 import { validaDescricao } from "./middlewares/validaDescricao.js";
+import {teste} from "./Controllers/Teste.js";
 import {
-  teste,
   marcaTarefaComoConcluida,
 pegaTodasAsTarefasDeUmFuncionario,
 pegaAsTarefasPendentesDeUmFuncionario,
@@ -11,11 +11,23 @@ pegaAsTarefasConcluidasDeUmFuncionario,
   associaTarefaAUmFuncionario,
   pegaTodasAsTarefasCriadasPorUmSupervisor,
   pegaTodasAsTarefas,
-pegaTodasAsTarefasPendentes,
-pegaTodosOsFuncionariosDisponiveis
+pegaTodasAsTarefasPendentes
 } from "./Controllers/Tarefa.js";
+import {
+pegaTodosOsFuncionariosDisponiveis,
+pegaTodosOsClientes,
+pegaTodosOsFuncionarios,
+pegaTodosOsSupervisores,
+pegaTodosOsGerentes
+} from "./Controllers/Cliente.js";
+
+
+
+
 
 const router = Router();
+
+
 
 // Rota de teste de conexão
 router.get("/teste", teste);
@@ -54,5 +66,12 @@ router.get("/gerente/todas", pegaTodasAsTarefas);
 router.get('/gerente/pendentes',pegaTodasAsTarefasPendentes)
 router.get('/gerente/funcionariosdisponiveis',pegaTodosOsFuncionariosDisponiveis)
 router.get('/gerente/:id_supervisor',validaId('id_supervisor'),pegaTodasAsTarefasCriadasPorUmSupervisor)
+
+// // Rotas que retornam os registros da tabela de clientes
+router.get("/usuario/todos", pegaTodosOsClientes);
+router.get('/usuario/funcionarios',pegaTodosOsFuncionarios)
+router.get('/usuario/supervisores',pegaTodosOsSupervisores)
+router.get('/usuario/gerentes',pegaTodosOsGerentes)
+
 
 export default router;
