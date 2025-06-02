@@ -66,3 +66,24 @@ fetch(url ,{
     console.error('Erro ao buscar as tarefas:', error); 
 });
 }
+
+// carregar todos os funcionários ao carregar a página
+window.addEventListener('DOMContentLoaded',()=>{
+    fetch('http://localhost:3000/usuario/funcionarios', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then(responde => responde.json()).then(funcionarios => {
+        const Funcionario = document.getElementById('funcionarioID');
+        funcionarios.forEach(funcionario =>{
+            const option = document.createElement('option');
+            option.value = funcionario.id;
+            option.textContent = `${funcionario.nome} (${funcionario.id})`;
+            Funcionario.appendChild(option);
+        });
+    }
+).catch(error => {
+        console.error('Erro ao carregar os funcionários:', error);
+    });
+})
