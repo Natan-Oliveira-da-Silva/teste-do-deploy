@@ -4,12 +4,12 @@ export async function pegaTodosOsFuncionariosDisponiveis(req, res, next) {
     const db = await openDb();
 
     const funcionarios = await db.all(`
-      SELECT c.id, c.nome
-      FROM clientes c
-      LEFT JOIN tarefas t 
-        ON c.id = t.id_funcionário AND t.estaConcluida = 0
-      WHERE c.cargo = 'funcionário' AND t.id IS NULL
-    `);
+      SELECT c.*
+FROM clientes c
+LEFT JOIN tarefas t 
+  ON c.id = t.id_funcionário AND t.estaConcluida = 0
+WHERE c.cargo = 'funcionário' AND t.id IS NULL;
+`);
 
     res.status(200).json(funcionarios);
   } catch (error) {
@@ -21,10 +21,7 @@ export async function pegaTodosOsClientes(req, res, next) {
     const db = await openDb();
 
     const clientes = await db.all(`
-      SELECT c.id, c.nome
-      FROM clientes c
-      LEFT JOIN tarefas t 
-        ON c.id = t.id_funcionário AND t.estaConcluida = 0
+      SELECT * FROM clientes
     `);
 
     res.status(200).json(clientes);
