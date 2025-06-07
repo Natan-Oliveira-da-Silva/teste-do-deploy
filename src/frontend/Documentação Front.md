@@ -93,11 +93,32 @@ Mostra todos os funcionários que não possuem tarefas pendentes.
 
 ## 4. Área do Supervisor
 
-### a) Tela Inicial do Supervisor (homeSupervisor.html)
 
-**Função:**  
-*Arquivo está vazio no momento.*  
-Sugestão: implementar funcionalidades como criar, editar e consultar tarefas dos funcionários.
+O módulo Supervisor do sistema é composto por três páginas principais, cada uma com uma função específica para o gerenciamento de tarefas dos funcionários.
+
+1. Página Principal do Supervisor (homeSupervisor.html)
+Caminho: homeSupervisor.html
+Descrição:
+Esta é a página inicial do Supervisor. Nela, o usuário encontra botões para acessar rapidamente as principais funcionalidades do módulo:
+Relatório de Tarefas dos Funcionários: Permite consultar todas as tarefas (pendentes e concluídas) de qualquer funcionário.
+Criar e Associar Tarefa: Permite criar uma nova tarefa e associá-la a um funcionário.
+Voltar à Página Inicial: Retorna para a tela principal do sistema.
+2. Relatório de Tarefas dos Funcionários (relatorioSupervisor.html)
+Caminho: relatorioSupervisor.html
+Descrição:
+Nesta página, o supervisor pode:
+Selecionar um funcionário pelo menu suspenso.
+Visualizar todas as tarefas pendentes, concluídas ou ambas, utilizando os botões correspondentes.
+Os dados são exibidos em uma lista, facilitando o acompanhamento do status das tarefas.
+Há um botão para retornar à página principal do supervisor.
+3. Criar e Associar Tarefa (criarTarefa.html)
+Caminho: criarTarefa.html
+Descrição:
+Esta página permite ao supervisor:
+Criar uma nova tarefa: Informando o ID do supervisor e a descrição da tarefa.
+Associar uma tarefa existente a um funcionário: Selecionando o funcionário e informando o ID da tarefa.
+Mensagens de sucesso ou erro são exibidas após cada operação.
+Há um botão para retornar à página principal do supervisor.
 
 ---
 
@@ -105,7 +126,7 @@ Sugestão: implementar funcionalidades como criar, editar e consultar tarefas do
 
 - **funcionario.js**: Gerencia as ações do funcionário (concluir tarefa, visualizar tarefas).
 - **gerente.js**: Gerencia as ações do gerente (visualizar tarefas, filtrar, listar funcionários disponíveis).
-
+- **supervisor.js**: Gerencia as ações do supervisor (visualizar tarefas, Criação e Associação de tarefas, listar funcionários e suas tarefas(pendentes e concluídas)).
 ---
 
 ## Observações Gerais
